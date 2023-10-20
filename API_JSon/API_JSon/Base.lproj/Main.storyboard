@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ExZ-TC-fhl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Danh sach huyen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="API_JSon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S19-aS-113">
+                                <rect key="frame" x="140.5" y="88" width="133.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="d8j-3L-rhd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Chon thanh pho">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chossenProvincesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yS5-8Y-im4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-jA-Iv1">
+                                <rect key="frame" x="30" y="143" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="oM5-AX-Yl1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hZ7-jA-Iv1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHt-J0-FTl"/>
+                            <constraint firstItem="hZ7-jA-Iv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="J6e-T9-Vce"/>
+                            <constraint firstItem="hZ7-jA-Iv1" firstAttribute="top" secondItem="S19-aS-113" secondAttribute="bottom" constant="10" id="UZf-fm-teX"/>
+                            <constraint firstItem="S19-aS-113" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qbR-Cz-CyB"/>
+                            <constraint firstItem="S19-aS-113" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="usw-9w-VP5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Danh sach huyen" id="N0w-dQ-XtM"/>
+                    <connections>
+                        <segue destination="QoA-ez-njy" kind="show" identifier="toSelectedProvincesVC" id="COV-KG-Kto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="71.651785714285708"/>
+        </scene>
+        <!--Thanh Pho-->
+        <scene sceneID="oTd-py-28Y">
+            <objects>
+                <viewController id="QoA-ez-njy" customClass="SelectedProvincesVC" customModule="API_JSon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="umQ-Cw-jGc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y20-yy-otF">
+                                <rect key="frame" x="30" y="98" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="e2v-mh-jsU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-1o-QAO">
+                                <rect key="frame" x="0.0" y="162" width="414" height="700"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="erp-9i-0Q6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E0l-1o-QAO" firstAttribute="leading" secondItem="erp-9i-0Q6" secondAttribute="leading" id="0iS-8s-8je"/>
+                            <constraint firstItem="Y20-yy-otF" firstAttribute="leading" secondItem="erp-9i-0Q6" secondAttribute="leading" constant="30" id="6VH-Oc-msV"/>
+                            <constraint firstItem="erp-9i-0Q6" firstAttribute="trailing" secondItem="E0l-1o-QAO" secondAttribute="trailing" id="9jg-fp-E2r"/>
+                            <constraint firstItem="Y20-yy-otF" firstAttribute="top" secondItem="erp-9i-0Q6" secondAttribute="top" constant="10" id="Jcl-YY-1zx"/>
+                            <constraint firstItem="E0l-1o-QAO" firstAttribute="top" secondItem="Y20-yy-otF" secondAttribute="bottom" constant="30" id="KhI-Z1-l86"/>
+                            <constraint firstItem="Y20-yy-otF" firstAttribute="centerX" secondItem="umQ-Cw-jGc" secondAttribute="centerX" id="QWB-cR-iTi"/>
+                            <constraint firstItem="erp-9i-0Q6" firstAttribute="bottom" secondItem="E0l-1o-QAO" secondAttribute="bottom" id="y4l-XE-cZJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thanh Pho" id="Q3v-Zi-LgK"/>
+                    <connections>
+                        <outlet property="tableViewProvinces" destination="E0l-1o-QAO" id="hJX-GZ-p3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZD-8w-GOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963.7681159420292" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8oF-7g-TXe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ExZ-TC-fhl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O6M-xx-gy6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KFq-XP-5Wx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLV-tP-wrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
