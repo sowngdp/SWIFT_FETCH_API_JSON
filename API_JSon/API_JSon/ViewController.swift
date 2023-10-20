@@ -19,11 +19,11 @@ class ViewController: UIViewController {
 //
 //        delegate?.callAPI()
         
-        print(getDistrictByProvineID(provindID: "1"))
+       getDistrictByProvineID(provindID: "1")
 
         // Do any additional setup after loading the view.
     }
-    func getDistrictByProvineID(provindID : String) -> [Dictrict] {
+    func getDistrictByProvineID(provindID : String) {
         WebServices.shared.callAPI()
         
     }
