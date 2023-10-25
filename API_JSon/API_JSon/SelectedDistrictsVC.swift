@@ -56,6 +56,7 @@ class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegat
     }
 
     func sendDelegate(province: Province) {
+        districtsOfProvince.removeAll()
         getDistrictsByProvinceID(province: province)
     }
     
