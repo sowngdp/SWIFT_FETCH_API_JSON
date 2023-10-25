@@ -11,6 +11,10 @@ import UIKit
 
 
 class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var buttonProvince: UIButton!
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
             return self.districtsOfProvince.count
@@ -34,15 +38,12 @@ class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegat
     }
     
     func getDistrictsByProvinceID(province: Province){
-        WebServices.shared.callAPIDistricts { districts in
+        WebServices.shared.callAPIDistricts { 
+            districts in
             if let districts = districts {
-                // Use the districts array here
-                print(province)
                 for district in districts {
                     if district.province_code == province.code {
                         self.districtsOfProvince.append(district)
-                        print(self.districtsOfProvince.count)
-
                     }
                 }
                 DispatchQueue.main.async {
@@ -56,6 +57,7 @@ class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegat
     }
 
     func sendDelegate(province: Province) {
+        buttonProvince.setTitle(province.name, for: .normal)
         districtsOfProvince.removeAll()
         getDistrictsByProvinceID(province: province)
     }

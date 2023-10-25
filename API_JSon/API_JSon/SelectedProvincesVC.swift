@@ -33,7 +33,6 @@ class SelectedProvincesVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(provindes![indexPath.row].code)
         delegate?.sendDelegate(province: provindes![indexPath.row])
         self.navigationController?.popViewController(animated: true)
     }

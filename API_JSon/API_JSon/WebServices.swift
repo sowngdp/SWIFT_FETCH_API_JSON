@@ -23,7 +23,6 @@ class WebServices
                     if let data = data {
                         do {
                             let provinces = try JSONDecoder().decode([Province].self, from: data)
-                            print(provinces[1].name!)
                             completion(provinces)
                         } catch {
                             print("Error: (error)")
@@ -46,7 +45,6 @@ class WebServices
                     if let data = data {
                         do {
                             let districts = try JSONDecoder().decode([District].self, from: data)
-                            print(districts[1].province_code!)
                             completion(districts)
                         } catch {
                             print("Error: (error)")

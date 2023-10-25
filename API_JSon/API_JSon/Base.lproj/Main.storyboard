@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ExZ-TC-fhl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ExZ-TC-fhl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Danh sach huyen-->
+        <!--Danh sách huyện-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SelectedDistrictsVC" customModule="API_JSon" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S19-aS-113">
-                                <rect key="frame" x="140.5" y="88" width="133.5" height="45"/>
+                                <rect key="frame" x="140.5" y="92" width="133.5" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="d8j-3L-rhd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Chon thanh pho">
+                                <buttonConfiguration key="configuration" style="filled" title="Chọn thành phố">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -30,7 +31,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZ7-jA-Iv1">
-                                <rect key="frame" x="30" y="143" width="354" height="34"/>
+                                <rect key="frame" x="30" y="147" width="354" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="oM5-AX-Yl1"/>
                                 </constraints>
@@ -38,7 +39,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-2u-coY">
-                                <rect key="frame" x="30" y="196" width="354" height="666"/>
+                                <rect key="frame" x="30" y="200" width="354" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -56,8 +57,9 @@
                             <constraint firstItem="L3g-2u-coY" firstAttribute="trailing" secondItem="hZ7-jA-Iv1" secondAttribute="trailing" id="zbb-93-Cnt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Danh sach huyen" id="N0w-dQ-XtM"/>
+                    <navigationItem key="navigationItem" title="Danh sách huyện" id="N0w-dQ-XtM"/>
                     <connections>
+                        <outlet property="buttonProvince" destination="S19-aS-113" id="2mI-FX-btD"/>
                         <outlet property="tbView" destination="L3g-2u-coY" id="82W-jv-eJZ"/>
                         <segue destination="QoA-ez-njy" kind="show" identifier="toSelectedProvincesVC" id="COV-KG-Kto"/>
                     </connections>
@@ -66,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="1089.8550724637682" y="71.651785714285708"/>
         </scene>
-        <!--Thanh Pho-->
+        <!--Thành phố-->
         <scene sceneID="oTd-py-28Y">
             <objects>
                 <viewController id="QoA-ez-njy" customClass="SelectedProvincesVC" customModule="API_JSon" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y20-yy-otF">
-                                <rect key="frame" x="30" y="98" width="354" height="34"/>
+                                <rect key="frame" x="30" y="102" width="354" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="e2v-mh-jsU"/>
                                 </constraints>
@@ -83,7 +85,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-1o-QAO">
-                                <rect key="frame" x="0.0" y="162" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="166" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -99,7 +101,7 @@
                             <constraint firstItem="erp-9i-0Q6" firstAttribute="bottom" secondItem="E0l-1o-QAO" secondAttribute="bottom" id="y4l-XE-cZJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Thanh Pho" id="Q3v-Zi-LgK"/>
+                    <navigationItem key="navigationItem" title="Thành phố" id="Q3v-Zi-LgK"/>
                     <connections>
                         <outlet property="tableViewProvinces" destination="E0l-1o-QAO" id="hJX-GZ-p3d"/>
                     </connections>
@@ -114,7 +116,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ExZ-TC-fhl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O6M-xx-gy6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
