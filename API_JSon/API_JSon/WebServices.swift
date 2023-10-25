@@ -39,6 +39,30 @@ class WebServices
                 completion(nil)
             }
         }
+    
+    func callAPIDistricts(completion: @escaping ([District]?) -> Void) {
+            if let url = URL(string: baseDistrictsURL) {
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data = data {
+                        do {
+                            let districts = try JSONDecoder().decode([District].self, from: data)
+                            print(districts[1].province_code!)
+                            completion(districts)
+                        } catch {
+                            print("Error: (error)")
+                            completion(nil)
+                        }
+                    } else {
+                        print("Error: Data is nil")
+                        completion(nil)
+                    }
+                }.resume()
+            } else {
+                print("Error: Invalid URL")
+                completion(nil)
+            }
+        }
+    
 }
 
 

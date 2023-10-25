@@ -18,7 +18,7 @@ struct Province: Codable {
 struct District: Codable {
     
     var name: String?
-    var provinces_code: Int?
+    var province_code: Int?
     var type_districts: String?
     var code: Int?
     

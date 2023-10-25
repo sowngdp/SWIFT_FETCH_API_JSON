@@ -7,22 +7,35 @@
 
 import UIKit
 protocol ProvineDelegate{
-    // tra ve provineID
+    func sendDelegate(province: Province)
 }
 
 
 class SelectedProvincesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var delegate : ProvineDelegate?
     var provindes : [Province]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.provindes!.count
+        if provindes != nil {
+            return self.provindes!.count
+        }
+            else{
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = provindes![indexPath.row].name!
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(provindes![indexPath.row].code)
+        delegate?.sendDelegate(province: provindes![indexPath.row])
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBOutlet weak var tableViewProvinces: UITableView!
@@ -41,7 +54,9 @@ class SelectedProvincesVC: UIViewController, UITableViewDelegate, UITableViewDat
         WebServices.shared.callAPIProvinces() { provinces in
             if let province = provinces {
                 self.provindes = province
-                self.tableViewProvinces.reloadData()
+                DispatchQueue.main.async {
+                    self.tableViewProvinces.reloadData()
+                }
 
                 
             } else {

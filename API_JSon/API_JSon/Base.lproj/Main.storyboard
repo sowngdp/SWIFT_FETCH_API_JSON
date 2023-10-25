@@ -37,19 +37,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L3g-2u-coY">
+                                <rect key="frame" x="30" y="196" width="354" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="L3g-2u-coY" firstAttribute="leading" secondItem="hZ7-jA-Iv1" secondAttribute="leading" id="4id-cu-fZ4"/>
                             <constraint firstItem="hZ7-jA-Iv1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHt-J0-FTl"/>
                             <constraint firstItem="hZ7-jA-Iv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="J6e-T9-Vce"/>
                             <constraint firstItem="hZ7-jA-Iv1" firstAttribute="top" secondItem="S19-aS-113" secondAttribute="bottom" constant="10" id="UZf-fm-teX"/>
+                            <constraint firstItem="L3g-2u-coY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YBs-4T-bYf"/>
+                            <constraint firstItem="L3g-2u-coY" firstAttribute="top" secondItem="hZ7-jA-Iv1" secondAttribute="bottom" constant="19" id="Z2d-I0-ETv"/>
                             <constraint firstItem="S19-aS-113" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qbR-Cz-CyB"/>
                             <constraint firstItem="S19-aS-113" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="usw-9w-VP5"/>
+                            <constraint firstItem="L3g-2u-coY" firstAttribute="trailing" secondItem="hZ7-jA-Iv1" secondAttribute="trailing" id="zbb-93-Cnt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Danh sach huyen" id="N0w-dQ-XtM"/>
                     <connections>
+                        <outlet property="tbView" destination="L3g-2u-coY" id="82W-jv-eJZ"/>
                         <segue destination="QoA-ez-njy" kind="show" identifier="toSelectedProvincesVC" id="COV-KG-Kto"/>
                     </connections>
                 </viewController>
