@@ -38,7 +38,8 @@ class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegat
     }
     
     func getDistrictsByProvinceID(province: Province){
-        WebServices.shared.callAPIDistricts { 
+        districtsOfProvince.removeAll()
+        WebServices.shared.callAPIDistricts {
             districts in
             if let districts = districts {
                 for district in districts {
@@ -58,7 +59,6 @@ class SelectedDistrictsVC: UIViewController, ProvineDelegate, UITableViewDelegat
 
     func sendDelegate(province: Province) {
         buttonProvince.setTitle(province.name, for: .normal)
-        districtsOfProvince.removeAll()
         getDistrictsByProvinceID(province: province)
     }
     
