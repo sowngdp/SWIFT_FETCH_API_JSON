@@ -7,24 +7,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EF7A17C2-F609-44F0-A522-71EA86B0A6F3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "callAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CE13F7A3-3D41-452C-B11D-5A54E94E9C98"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "API_JSon/WebServices.swift"
@@ -32,119 +16,195 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "callAPI()"
+            landmarkName = "WebServices"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49617FEB-AEF4-430A-881D-8B099758CDAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ACEAE54E-0FE9-4017-BE77-990B7BF2C153"
+            uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "callAPI()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "SelectedProvincesVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - c0e4889d8c0a0b6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.provindes.getter : Swift.Optional&lt;Swift.Array&lt;API_JSon.Province&gt;&gt;"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - aec8cac791218377"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.provindes.setter : Swift.Optional&lt;Swift.Array&lt;API_JSon.Province&gt;&gt;"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - ed711b38a1b0bd68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.provindes.modify : Swift.Optional&lt;Swift.Array&lt;API_JSon.Province&gt;&gt;"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - 8d3d1110c39fb16e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.provindes.modify : Swift.Optional&lt;Swift.Array&lt;API_JSon.Province&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - 20c16cdc85160113"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; API_JSon.SelectedProvincesVC"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "1D0142E5-1748-4F8D-82B9-F154C2CF825C - d913e4075a022198"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "API_JSon.SelectedProvincesVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;API_JSon.SelectedProvincesVC&gt;"
+                  moduleName = "API_JSon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fyspoti/api_json/API_JSon/API_JSon/SelectedProvincesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "277B4C74-58C0-4729-B30D-95B95761254B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D5FCD77B-33E6-4539-BD57-17C521AED6C2"
+            uuid = "D043316E-C1B5-4819-B38E-B8B5299BCC8D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "callAPI()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getProvinces()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "58A4DBE0-FEC0-4B68-84C3-0C18AE132EE4"
+            uuid = "96E45999-22F2-4D04-92B3-360E5CD6FCCB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "callAPI()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getProvinces()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8D16F9F7-68CA-4164-80F6-37A734665B22"
+            uuid = "F8AFD91F-11AA-4084-9FA9-EB20A92042DA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
+            filePath = "API_JSon/SelectedProvincesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "callAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1B7F3A6-E295-4186-9B4E-C6E07677EAAE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "callAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3C178DCD-FB69-41DE-AED2-C4D8BEAC8A80"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "callAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "84E557E2-59F4-465E-A8EE-651C655117F4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "API_JSon/WebServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "callAPI()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getProvinces()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

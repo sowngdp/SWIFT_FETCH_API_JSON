@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class SelectedDistrictsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +19,11 @@ class ViewController: UIViewController {
 //
 //        delegate?.callAPI()
         
-       getDistrictByProvineID(provindID: "1")
+       
 
         // Do any additional setup after loading the view.
     }
-    func getDistrictByProvineID(provindID : String) {
-        WebServices.shared.callAPI()
-        
-    }
+
 
     @IBAction func chossenProvincesClicked(_ sender: Any) {
         performSegue(withIdentifier: "toSelectedProvincesVC", sender: nil)

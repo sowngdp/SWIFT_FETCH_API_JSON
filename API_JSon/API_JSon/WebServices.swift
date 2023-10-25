@@ -11,34 +11,34 @@ import Foundation
 class WebServices
 
 {
-    let baseURL = "https://provinces.open-api.vn/api/p/"
+    let baseProvincesURL = "https://provinces.open-api.vn/api/p/"
+    let baseDistrictsURL = "https://provinces.open-api.vn/api/d/"
     static let shared = WebServices()
     
     
     
-    func callAPI(){
-        let url = URL(string: baseURL)
-        
-        
-        
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    // Thực hiện giải mã dữ liệu JSON thành các đối tượng
-                    let provine = try decoder.decode([Province].self, from: data)
-                    // Bây giờ bạn có một mảng các đối tượng Tinh
-                    print(provine[1].name!)
-                } catch {
-                    print("Lỗi khi giải mã JSON: \(error)")
-                }
-            } else if let error = error {
-                print("Lỗi khi tải dữ liệu: \(error)")
+    func callAPIProvinces(completion: @escaping ([Province]?) -> Void) {
+            if let url = URL(string: baseProvincesURL) {
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data = data {
+                        do {
+                            let provinces = try JSONDecoder().decode([Province].self, from: data)
+                            print(provinces[1].name!)
+                            completion(provinces)
+                        } catch {
+                            print("Error: (error)")
+                            completion(nil)
+                        }
+                    } else {
+                        print("Error: Data is nil")
+                        completion(nil)
+                    }
+                }.resume()
+            } else {
+                print("Error: Invalid URL")
+                completion(nil)
             }
         }
-        task.resume()
-        
-    }
 }
 
 
